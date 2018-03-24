@@ -7,5 +7,7 @@ local config = {}
 
 config.RUNNING       = 'RUNNING'
 config.READY		 = 'READY'
+config.FAILED        = 'FAILED'
+config.SUCCESS       = 'SUCCESS'
 
 return config

@@ -25,7 +25,7 @@ function BT:getSleepTime(  )
 	if self.forceupdate then
 		return 0
 	end
-	return self.root:GetTreeSleepTime()
+	return self.root:getTreeSleepTime()
 end
 
 --暂停
