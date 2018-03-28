@@ -4,7 +4,7 @@
 
 #### 行为树介绍
 
-> 在处理AI上行为树比较常见，相比常规的状态机，优点显而易见，第一：拓展性高，第二：整个结构非常清晰
+> 在处理AI上行为树比较常见，相比常规的状态机，优点显而易见，第一：拓展性高，第二：整个结构非常清晰,第三：复用性高
 
 #### 举个例子（摘自网上）
 > 做个猫的AI,行为如下：1、看到mouse会去catch（mouseinsight） 2、看到dog会runaway（doginsight） 3、二者都看不到的时候standstill 4、二者都看到的时候会runaway
@@ -30,6 +30,26 @@
 * Brain
 
 >  每个生物都将有个Brain大脑，职责：1.生成行为树 2.对行为树提供外部接口 可以归纳为：对固定行为树的管理
+
+* 序列（Sequence）节点
+
+> 顺序迭代子节点，如果子节点failed或者running状态那么返回子节点状态，直到全部成功迭代完成返回success
+
+* ParallelNode
+
+> 并行执行子节点，一帧执行完成，其中某一个执行返回false 则Parallel节点返回false，全部成功则算成功
+
+* ParallelNodeAny
+
+> 并行执行子节点，一帧执行完成，只需任何一个完成即可返回success
+
+* Selector Node
+
+> 顺序迭代子节点，如果子节点running或者success状态那么返回该状态，全部执行完成没找到则返回failed
+
+* Loop Node
+
+> 循环节点，该逻辑节点的所有子节点循环N次，如果循环过程中子节点running或者failed返回该状态，循环完成需重置子节点，全部执行完成返回success
 
 
 
