@@ -10,4 +10,4 @@
 >> 做个猫的AI,行为如下：1、看到mouse会去catch（mouseinsight） 2、看到dog会runaway（doginsight） 3、二者都看不到的时候standstill 4、二者都看到的时候会runaway
 
 先用状态机做出AI：
-![image](https://github.com/563476223/Behaviourtree/image/1.png)
+![image](Behaviourtree/image/1.png)
