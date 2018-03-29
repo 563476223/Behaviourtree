@@ -45,7 +45,7 @@
 
 * Selector Node
 
-> 顺序迭代子节点，如果子节点running或者success状态那么返回该状态，全部执行完成没找到则返回failed
+> 顺序迭代子节点，选择子节点中处于running或者success状态的子节点，如果不存在则返回failed
 
 * Loop Node
 
