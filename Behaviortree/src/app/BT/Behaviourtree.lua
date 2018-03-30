@@ -4,10 +4,10 @@
 -- Date: 2018-03-29 02:30:52
 --======================================================
 
-RUNNING       = 'RUNNING'
-READY		 = 'READY'
-FAILED        = 'FAILED'
-SUCCESS       = 'SUCCESS'
+local RUNNING       = 'RUNNING'
+local READY		 	= 'READY'
+local FAILED        = 'FAILED'
+local SUCCESS       = 'SUCCESS'
 
 ---------------BT tree----------
 
